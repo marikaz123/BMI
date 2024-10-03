@@ -9,7 +9,7 @@ HMAX = 235
 WMIN = 350    ;min. waga * 10
 WMAX = 1800   ;max. waga * 10
 
-IFDEF COMDOT
+IFDEF COMMDOT
  SEP  EQU ','
  DECP EQU '.'
 ELSE
@@ -17,7 +17,7 @@ ELSE
  DECP EQU ','   ;"kropka" dziesietma
 ENDIF
 
-PUBLIC GetParam
+PUBLIC GetParam,SEP,DECP
 EXTRN height:WORD,weight:WORD
 
 SKIPBC MACRO
