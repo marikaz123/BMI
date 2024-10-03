@@ -6,7 +6,6 @@ BMI.COM: BMI.OBJ GP.OBJ CBMI.OBJ
 BMI.OBJ: BMI.ASM
          TASM /m BMI.ASM
 GP.OBJ: GP.ASM
-        #TASM /m GP.ASM
-        TASM /m /dCOMMDOT GP.ASM
+        TASM /m GP.ASM
 CBMI.OBJ: CBMI.ASM
           TASM /m CBMI.ASM

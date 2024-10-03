@@ -10,7 +10,6 @@
 PUBLIC height,weight
 EXTRN GetParam:PROC
 EXTRN CalculateBMI:PROC
-EXTRN SEP:ABS,DECP:ABS
 
 AST  EQU 3Bh
 AMT  EQU 39h
@@ -235,10 +234,10 @@ message DB 13,10,9,'Twoj BMI to: '
 info    LABEL ;oba teksty nigdy nie sa wyswietlane na raz.
         DB "*** BMI v1.1 * (c)1997 'marikaz' ***",13,10
         DB 'https://en.wikipedia.org/wiki/Body_mass_index',13,10,13,10
-        DB '    BMI.COM <WZROST',SEP,'WAGA>',13,10,13,10
+        DB '   BMI.COM <WZROST> <WAGA>',13,10,13,10
         DB 'WZROST  [cm], zakres: 135..235',13,10
-        DB '  WAGA  [kg], max. 1 znak po kropce, zakres: '
-        DB '35',DECP,'0..180',DECP,'0',13,10
+        DB '  WAGA  [kg], max. 1 znak po przecinku (lub kropce), zakres: '
+        DB '35,0..180,0',13,10
         DB '$'
 
         END Main
